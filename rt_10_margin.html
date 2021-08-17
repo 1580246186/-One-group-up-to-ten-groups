@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div01{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /*marin：盒子水平居中*/
+            /*margin设置负值表示向反方向移动*/
+            margin: -50px auto;
+        }
+        .div02{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        .div03{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /*在同一方向添加margin，只会执行一个值*/
+            margin-top: 20px;
+        }
+
+        .big{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 1px solid red;
+        }
+        .small{
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            /*margin的顶部塌陷，盒子嵌套时，内部盒子添加margin-top属性时会自动传递给外部盒子，而内部盒子的margin-top不起作用*/
+            /*给大盒子添加边框解决*/
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div01">div01</div>
+    <div class="div02">div02</div>
+    <div class="div03">div03</div>
+
+    <div class="big">
+        <div class="small"></div>
+    </div>
+
+</body>
+</html>
