@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*通配符选择器（*）：可以选中当前文档中所有的标签,优先级最低的，为0*/
+        *{
+            color: red;
+        }
+        /*标签选择器：可以选中文档中所有的相同的标签,缺点：一次选中所有相同的标签*/
+        h2{
+            text-decoration: underline;
+            color: blue;
+        }
+        /*id选择器：可以给标签添加ID属性，id是唯一的不能重复的*/
+        #div02{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            text-align: center;
+            /*垂直居中，设置行高，line-height*/
+            line-height: 100px;
+        }
+        /*组选择器：具有相同样式的标签设置为一组*/
+        #div01,#div03{
+            width: 200px;
+            height: 50px;
+            background-color: deeppink;
+            color: deepskyblue;
+        }
+
+        /*类选择器：class选择器，具有形同样式的可以设置同一个class名*/
+        .list .single{
+            background-color: pink;
+        }
+        .list .double{
+            background-color: blueviolet;
+        }
+        .list{
+            /*去掉无序列表原生样式*/
+            list-style: none;
+        }
+        /*层级选择器：父级标签+子级标签的方式*/
+        .list1 .single{
+            color: blue;
+        }
+        .list1 .double{
+            color: deeppink;
+        }
+
+        #box{
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            color: blue;
+            line-height: 50px;
+            border: 1px solid red;
+        }
+        /*伪类选择器hover：设置获取焦点后的样式*/
+        #box:hover{
+            background-color: deepskyblue;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>这是一个标题</h2>
+    <h2>这是另外一个</h2>
+    <div id="div01">这是div01</div>
+    <div id="div02">这是div02</div>
+    <div id="div03">这是div03</div>
+    <a href="#">百度一下</a>
+
+    <ul class="list">
+        <li class="single">新闻标题1</li>
+        <li class="double">新闻标题2</li>
+        <li class="single">新闻标题3</li>
+        <li class="double">新闻标题4</li>
+        <li class="single">新闻标题5</li>
+        <li class="double">新闻标题6</li>
+    </ul>
+
+    <ul class="list1">
+        <li class="single">1</li>
+        <li class="double">2</li>
+        <li class="single">3</li>
+        <li class="double">4</li>
+        <li class="single">5</li>
+        <li class="double">6</li>
+    </ul>
+
+    <div id="box">这是一个div</div>
+</body>
+</html>
